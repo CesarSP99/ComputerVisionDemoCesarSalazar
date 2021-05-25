@@ -18,6 +18,7 @@ namespace ConsoleAppCV_OCR
 
         static void Main(string[] args)
         {
+            Console.Write("Ingrese la URL a procesar: ");
             string READ_TEXT_URL_IMAGE = Console.ReadLine();
             ComputerVisionClient client = Authenticate(endpoint, subscriptionKey);
             ReadFileUrl(client, READ_TEXT_URL_IMAGE).Wait();

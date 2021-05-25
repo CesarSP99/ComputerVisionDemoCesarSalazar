@@ -14,6 +14,7 @@ namespace ConsoleAppCVAnalisis
 
         static void Main(string[] args)
         {
+            Console.Write("Ingrese la URL a procesar: ");
             string ANALYZE_URL_IMAGE = Console.ReadLine();
             ComputerVisionClient client = Authenticate(endpoint, subscriptionKey);
             AnalyzeImageUrl(client, ANALYZE_URL_IMAGE).Wait();
